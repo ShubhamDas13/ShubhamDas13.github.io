@@ -627,3 +627,8 @@ html, body { overflow-x: hidden; }
   .hint-hover { display: none; }
   .hint-touch { display: inline; }
 }
+@media (max-width: 720px) {
+  .role-meta { flex-wrap: wrap; white-space: normal; }
+  .role-head > div, .package-body, .entry-body, .kpi, .phase { min-width: 0; }
+  .role, .role p, .role li, .package p, .card p { overflow-wrap: anywhere; }
+}
