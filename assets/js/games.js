@@ -43,7 +43,10 @@ document.querySelectorAll(".cabinet").forEach(async (cabinet) => {
     start.disabled = true;
     start.textContent = "COMING SOON";
     if (note) {
-      note.innerHTML = `The browser version is on its way. Until then, <a href="${download}">download the Windows build</a>.`;
+      const link = document.createElement("a");
+      link.href = download || "#";
+      link.textContent = "download the Windows build";
+      note.replaceChildren("The browser version is on its way. Until then, ", link, ".");
     }
     return;
   }
