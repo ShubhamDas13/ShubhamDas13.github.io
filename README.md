@@ -6,13 +6,17 @@ A static two-page site. Open `index.html` in a browser; no build step.
 Project-1/
 ├── index.html              Work portfolio (TCIL, experience, projects)
 ├── social.html             Social page ("golden hour": travel, music, football)
+├── games.html              Arcade page: Warxel and Nimbus, playable in the browser
+├── games/                  Unity WebGL builds go here (see games/README.md)
 └── assets/
     ├── css/
     │   ├── main.css        Styles for index.html
-    │   └── social.css      Styles for social.html
+    │   ├── social.css      Styles for social.html
+    │   └── games.css       Styles for games.html
     ├── js/
     │   ├── main.js         index.html: menu, scroll progress, counters, timeline, lifecycle stepper
-    │   └── social.js       social.html: sunset scroll, snow, generated music, keys, football game, lightbox
+    │   ├── social.js       social.html: sunset scroll, snow, generated music, keys, football game, lightbox
+    │   └── games.js        games.html: loads each game's WebGL build into its arcade cabinet
     ├── images/
     │   ├── projects/       Screenshots used on the project cards
     │   └── travel/         Travel photos for the social page postcards
