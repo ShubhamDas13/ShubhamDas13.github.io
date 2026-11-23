@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /games/warxel/
+Disallow: /tools/
 
 Sitemap: https://shubhamdas13.github.io/sitemap.xml

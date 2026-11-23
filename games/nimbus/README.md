@@ -4,9 +4,9 @@ A browser version of Nimbus, the Unity game in `ShubhamDas13/Nimbus_GDD`. It is 
 JavaScript (no Unity runtime), so it runs on any browser, including phones (touch buttons appear automatically).
 
 - `index.html`: the game page (the Games tab loads it in the Nimbus cabinet)
-- `nimbus.js`: engine and gameplay, ported from the original C# scripts
+- `js/nimbus.js`: engine and gameplay, ported from the original C# scripts
   (PlayerController, UmibozuController, RavenController, BossController, BulletController, Health, ...)
-- `data.js`: levels, collision shapes, sprite frames and animation timings, generated from the
+- `js/data.js`: levels, collision shapes, sprite frames and animation timings, generated from the
   original build's `cloud_Data` folder
 - `assets/`: the original art (PNG) and sound (AAC) extracted from the build
 
@@ -18,3 +18,5 @@ Two deliberate differences from the Unity build:
 
 Credits: Ninja Frog sprites from Pixel Adventure by Pixel Frog; sounds from Pixabay; music
 "Orbital Graveyard (Modanung remix)" by vitalezzz and others as listed in the original project.
+
+The scripts that generated `js/data.js` and `assets/` are in `tools/nimbus-port/`.
