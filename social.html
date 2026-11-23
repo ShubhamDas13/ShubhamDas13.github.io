@@ -23,8 +23,8 @@
     <meta name="twitter:image" content="https://shubhamdas13.github.io/assets/images/og/social.jpg" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233b2d6b'/%3E%3Cstop offset='.6' stop-color='%23ff7e67'/%3E%3Cstop offset='1' stop-color='%23ffd29a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ccircle cx='32' cy='40' r='12' fill='%23fff3d6'/%3E%3Crect y='40' width='64' height='24' fill='%232a2357'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="assets/css/fonts.css?v=1" />
-    <link rel="stylesheet" href="assets/css/social.css?v=6" />
-    <script src="assets/js/social.js?v=5" defer></script>
+    <link rel="stylesheet" href="assets/css/social.css?v=18" />
+    <script src="assets/js/social.js?v=11" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -36,8 +36,10 @@
         </button>
         <nav class="nav-links" id="nav-links" aria-label="Social navigation">
           <a href="#postcards">Postcards</a>
+          <a href="#reels">Reels</a>
           <a href="#music">Music</a>
-          <a href="#football">Football</a>
+          <a href="#moments">Moments</a>
+          <a href="#lens">Lens</a>
           <a href="#instagram">Instagram</a>
           <a href="games.html">Games</a>
           <a class="nav-work" href="./">← Work portfolio</a>
@@ -170,40 +172,102 @@
         <header class="block-head reveal">
           <p class="kicker">01 · postcards</p>
           <h2>Places I’ve wandered</h2>
-          <p>Beaches, mountain roads and everything in between. Tap a postcard to open it.</p>
+          <p>Snowlines, prayer flags, waterfalls and misty hilltops.</p>
           <p class="hand swipe-hint" aria-hidden="true">swipe for more →</p>
         </header>
 
         <!--
-          To add a photo: drop it into assets/images/travel/ and replace a card's <div class="photo photo--empty …">…</div> with
-          <button type="button" class="photo"><img src="assets/images/travel/FILE.jpg" alt="DESCRIPTION" loading="lazy" /></button>
-          then write the place in its <p class="postcard-caption">.
+          To add a postcard: clean the photo with tools/clean-photos.py (removes GPS data), put it in
+          assets/media/, then copy one <figure class="postcard"> below and change the image and caption.
         -->
         <div class="postcards">
           <figure class="postcard reveal" style="--r: -4deg">
-            <div class="photo photo--empty photo--sunset"><span>photo coming soon</span></div>
-            <p class="postcard-caption">somewhere by the sea</p><span class="stamp" aria-hidden="true">01</span>
+            <div class="photo"><img src="assets/media/snowline.webp" width="1080" height="1080" alt="Shubham sitting on a rocky slope looking at snow-covered peaks" loading="lazy" decoding="async" /></div>
+            <figcaption class="postcard-caption">above the snowline</figcaption><span class="stamp" aria-hidden="true">01</span>
           </figure>
           <figure class="postcard reveal" style="--r: 3deg">
-            <div class="photo photo--empty photo--snow"><span>photo coming soon</span></div>
-            <p class="postcard-caption">up in the snow</p><span class="stamp" aria-hidden="true">02</span>
+            <div class="photo"><img src="assets/media/prayer-flags.webp" width="1120" height="1400" alt="Shubham on a rocky summit under colourful prayer flags and a deep blue sky" loading="lazy" decoding="async" /></div>
+            <figcaption class="postcard-caption">prayer flags &amp; blue skies</figcaption><span class="stamp" aria-hidden="true">02</span>
           </figure>
           <figure class="postcard reveal" style="--r: -2deg">
-            <div class="photo photo--empty photo--dusk"><span>photo coming soon</span></div>
-            <p class="postcard-caption">a long road trip</p><span class="stamp" aria-hidden="true">03</span>
+            <div class="photo"><img src="assets/media/by-the-waterfall.webp" width="1041" height="1400" alt="Shubham sitting on a rock by a rushing stream under tall pines" loading="lazy" decoding="async" /></div>
+            <figcaption class="postcard-caption">by the waterfall</figcaption><span class="stamp" aria-hidden="true">03</span>
           </figure>
           <figure class="postcard reveal" style="--r: 2.5deg">
-            <div class="photo photo--empty photo--snow"><span>photo coming soon</span></div>
-            <p class="postcard-caption">mountain mornings</p><span class="stamp" aria-hidden="true">04</span>
+            <div class="photo"><img src="assets/media/lost-in-the-clouds.webp" width="1050" height="1400" alt="Shubham lying on a green hilltop as mist rolls over the mountain" loading="lazy" decoding="async" /></div>
+            <figcaption class="postcard-caption">lost in the clouds</figcaption><span class="stamp" aria-hidden="true">04</span>
           </figure>
           <figure class="postcard reveal" style="--r: -3deg">
-            <div class="photo photo--empty photo--sunset"><span>photo coming soon</span></div>
-            <p class="postcard-caption">golden hour</p><span class="stamp" aria-hidden="true">05</span>
+            <div class="photo"><img src="assets/media/mountain-town.webp" width="1400" height="787" alt="Shubham in a red Himachali cap and white jacket with a hillside town behind" loading="lazy" decoding="async" /></div>
+            <figcaption class="postcard-caption">mountain town smiles</figcaption><span class="stamp" aria-hidden="true">05</span>
           </figure>
           <figure class="postcard reveal" style="--r: 4deg">
-            <div class="photo photo--empty photo--dusk"><span>photo coming soon</span></div>
-            <p class="postcard-caption">city lights</p><span class="stamp" aria-hidden="true">06</span>
+            <div class="photo"><img src="assets/media/by-the-water.webp" width="1080" height="1080" alt="Shubham at the water’s edge at dusk, islands on the horizon" loading="lazy" decoding="async" /></div>
+            <figcaption class="postcard-caption">by the water at dusk</figcaption><span class="stamp" aria-hidden="true">06</span>
           </figure>
+        </div>
+      </section>
+
+      <!-- REELS -->
+      <section class="block wrap" id="reels">
+        <header class="block-head reveal">
+          <p class="kicker">02 · reels</p>
+          <h2>Little clips from the road</h2>
+          <p>From Ladakh and Jibhi to Jaisalmer, Pushkar, Vizag and Goa. They play on their own as you scroll.</p>
+        </header>
+        <ul class="reels" role="list">
+          <li class="reel reveal">
+            <div class="reel-phone">
+              <video src="assets/media/ladakh.mp4" poster="assets/media/ladakh-poster.webp" muted loop playsinline preload="none" aria-label="Ladakh, standing by a frozen wetland with mountains behind (muted clip)"></video>
+            </div>
+            <p class="reel-cap hand">Ladakh</p>
+          </li>
+          <li class="reel reveal">
+            <div class="reel-phone">
+              <video src="assets/media/ten-k-above.mp4" poster="assets/media/ten-k-above-poster.webp" muted loop playsinline preload="none" aria-label="Jibhi: a selfie on a misty green hilltop (muted clip)"></video>
+            </div>
+            <p class="reel-cap hand">Jibhi</p>
+          </li>
+          <li class="reel reveal">
+            <div class="reel-phone">
+              <video src="assets/media/desert-days.mp4" poster="assets/media/desert-days-poster.webp" muted loop playsinline preload="none" aria-label="Jaisalmer: posing in a yellow outfit beside a decorated camel (muted clip)"></video>
+            </div>
+            <p class="reel-cap hand">Jaisalmer</p>
+          </li>
+          <li class="reel reveal">
+            <div class="reel-phone">
+              <video src="assets/media/beach-day.mp4" poster="assets/media/beach-day-poster.webp" muted loop playsinline preload="none" aria-label="Vizag: a quiet beach day, standing at the shoreline (muted clip)"></video>
+            </div>
+            <p class="reel-cap hand">Vizag</p>
+          </li>
+          <li class="reel reveal">
+            <div class="reel-phone">
+              <video src="assets/media/pushkar-mirror.mp4" poster="assets/media/pushkar-mirror-poster.webp" muted loop playsinline preload="none" aria-label="Pushkar: a mirror selfie in an ornate pink room (muted clip)"></video>
+            </div>
+            <p class="reel-cap hand">Pushkar</p>
+          </li>
+          <li class="reel reveal">
+            <div class="reel-phone">
+              <video src="assets/media/goa-diaries.mp4" poster="assets/media/goa-diaries-poster.webp" muted loop playsinline preload="none" aria-label="Goa: a collage of beach, food and flowers (muted clip)"></video>
+            </div>
+            <p class="reel-cap hand">Goa</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- SNOW + ON THE ROAD -->
+      <section class="block wrap" id="snow">
+        <div class="snow-grid">
+          <header class="block-head reveal">
+            <p class="kicker">03 · snow days</p>
+            <h2>White slopes, cold fingers</h2>
+            <p>Snow angels, pine forests and the kind of cold that makes the chai taste better.</p>
+          </header>
+          <div class="mosaic mosaic--two">
+          <div class="tile reveal tile--pano"><div class="tile-btn"><img src="assets/media/snow-portrait.webp" width="1400" height="787" alt="Shubham in sunglasses and a yellow-black jacket against a snowy backdrop" loading="lazy" decoding="async" /></div></div>
+          <div class="tile reveal"><div class="tile-btn"><img src="assets/media/snow-angel.webp" width="1400" height="787" alt="Shubham lying in the snow in a ski jacket, laughing" loading="lazy" decoding="async" /></div></div>
+          <div class="tile reveal"><div class="tile-btn"><img src="assets/media/snow-arms.webp" width="1400" height="787" alt="Shubham with arms wide open on a snowy slope between pine trees" loading="lazy" decoding="async" /></div></div>
+          </div>
         </div>
       </section>
 
@@ -211,13 +275,18 @@
       <section class="block wrap" id="music">
         <div class="music-grid">
           <header class="block-head reveal">
-            <p class="kicker">02 · music</p>
+            <p class="kicker">04 · music</p>
             <h2>I make music to slow things down</h2>
             <p>Music production is my way to unwind. Play along with the sunset mix on these keys: tap them<span class="kbd-only">, or use A to K on your keyboard</span>. Every key fits the chords, so nothing sounds wrong.</p>
             <p class="hand hand--small">turn the sound on ♪</p>
           </header>
 
-          <div class="deck reveal">
+          <div class="deck-wrap reveal">
+          <figure class="sticker">
+            <img src="assets/media/ukulele.webp" width="350" height="481" alt="Cut-out of Shubham playing a ukulele" loading="lazy" decoding="async" />
+            <figcaption class="hand">me + my ukulele</figcaption>
+          </figure>
+          <div class="deck">
             <div class="deck-top">
               <div class="record" aria-hidden="true"><span></span></div>
               <div class="deck-info">
@@ -240,6 +309,7 @@
               <button type="button" class="key" data-note="7">K</button>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
@@ -247,14 +317,21 @@
       <section class="block wrap" id="football">
         <div class="music-grid music-grid--flip">
           <header class="block-head reveal">
-            <p class="kicker">03 · football</p>
-            <h2>Beach football, golden hour</h2>
+            <p class="kicker">05 · football</p>
+            <h2>Number 11, on the turf</h2>
             <p>Football was my sport in college, and I hold a Certificate of Excellence in Football. It’s still my favourite way to switch off. Go on, take a shot.</p>
+            <figure class="match-photo reveal">
+              <div class="photo"><img src="assets/media/football-shot.webp" width="620" height="1122" alt="Shubham in the number 11 DAS jersey, striking the ball towards goal" loading="lazy" decoding="async" /></div>
+              <figcaption class="postcard-caption">eyes on goal</figcaption>
+            </figure>
           </header>
 
-          <div class="beach-pitch reveal">
+          <div class="turf-pitch reveal">
             <div class="pitch-field" aria-hidden="true">
               <span class="pitch-line"></span>
+              <span class="pitch-circle"></span>
+              <span class="pitch-box"></span>
+              <span class="pitch-six"></span>
               <span class="goal"></span>
               <span class="keeper"></span>
               <span class="ball">⚽</span>
@@ -270,7 +347,7 @@
       <!-- EXPLORING -->
       <section class="block wrap" id="exploring">
         <header class="block-head reveal">
-          <p class="kicker">04 · exploring</p>
+          <p class="kicker">06 · exploring</p>
           <h2>Always picking up something new</h2>
         </header>
         <div class="glass-grid">
@@ -279,6 +356,52 @@
           <div class="glass reveal"><span class="glass-icon" aria-hidden="true">🎬</span><h3>Video editing</h3><p>Edited videos for the Literary, Debate and Anime Club at IIIT Delhi.</p></div>
           <div class="glass reveal"><span class="glass-icon" aria-hidden="true">🎶</span><h3>Music production</h3><p>Building tracks and sounds in my free time.</p></div>
         </div>
+      </section>
+
+      <!-- MOMENTS -->
+      <section class="block wrap" id="moments">
+        <header class="block-head reveal">
+          <p class="kicker">07 · moments</p>
+          <h2>Little things I keep</h2>
+          <p>Trail dogs, festival lights and pink-city evenings. Straight from my Instagram.</p>
+        </header>
+        <ul class="moments" role="list">
+          <li class="moment reveal"><div class="moment-btn"><img src="assets/media/festival-lights.webp" width="1080" height="1080" alt="Shubham in a blue kurta leaning on a wall of fairy lights" loading="lazy" decoding="async" /></div></li>
+          <li class="moment reveal"><div class="moment-btn"><img src="assets/media/trail-buddy.webp" width="1080" height="1080" alt="Selfie with a big black dog on a forest trail" loading="lazy" decoding="async" /></div></li>
+          <li class="moment reveal"><div class="moment-btn"><img src="assets/media/pink-city.webp" width="1400" height="1400" alt="Collage of Shubham at sunset over the city and in a pink turban and mirror-work outfit" loading="lazy" decoding="async" /></div></li>
+        </ul>
+      </section>
+
+      <!-- THROUGH MY LENS -->
+      <section class="block wrap" id="lens">
+        <header class="block-head reveal">
+          <p class="kicker">08 · through my lens</p>
+          <h2>Places, as I saw them</h2>
+          <p>Monuments, cities and quiet corners I’ve photographed and filmed along the way. The clips play on their own as you scroll.</p>
+        </header>
+        <ul class="lens" role="list">
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-victoria-memorial.mp4" poster="assets/media/lens-victoria-memorial.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-victoria-memorial.webp" width="720" height="1280" alt="Victoria Memorial in Kolkata framed by trees under a blue sky (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">Victoria Memorial, Kolkata</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-orange-hour.webp" width="1400" height="788" alt="An orange sunset over still water and a hill on the horizon" loading="lazy" decoding="async" /><span class="lens-cap">orange hour</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-dakshineswar.mp4" poster="assets/media/lens-dakshineswar.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-dakshineswar.webp" width="720" height="1280" alt="Dakshineswar temple reflected in still water, framed by palm leaves (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">Dakshineswar, Kolkata</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video lens-crop"><video src="assets/media/lens-howrah-bridge.mp4" poster="assets/media/lens-howrah-bridge.webp" width="720" height="1152" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-howrah-bridge.webp" width="720" height="1152" alt="Howrah Bridge at dusk with a small boat crossing the river (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">Howrah Bridge, Kolkata</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-green-hills.webp" width="787" height="1400" alt="Green hills dropping to the sea under a bright sky" loading="lazy" decoding="async" /><span class="lens-cap">green all the way down</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-gateway-of-india.webp" width="787" height="1400" alt="Gateway of India under a dramatic cloudy sky" loading="lazy" decoding="async" /><span class="lens-cap">Gateway of India, Mumbai</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-boats-at-sunset.webp" width="1400" height="788" alt="Silhouetted boats on golden water at sunset" loading="lazy" decoding="async" /><span class="lens-cap">boats at last light</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-clock-tower.mp4" poster="assets/media/lens-clock-tower.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-clock-tower.webp" width="720" height="1280" alt="An illuminated clock tower against the night sky (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">clock tower after dark</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-valley.mp4" poster="assets/media/lens-valley.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-valley.webp" width="720" height="1280" alt="A green mountain valley with a river winding below (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">the valley</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-yellow-taxi.mp4" poster="assets/media/lens-yellow-taxi.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-yellow-taxi.webp" width="720" height="1280" alt="A yellow Kolkata taxi on a neon-lit street at night (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">yellow taxi nights</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-ferries.webp" width="787" height="1400" alt="Ferries moored along a busy harbour under blue skies" loading="lazy" decoding="async" /><span class="lens-cap">harbour mornings</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-dusk-crossing.webp" width="1400" height="788" alt="A small boat crossing a river past a wooded island at dusk" loading="lazy" decoding="async" /><span class="lens-cap">dusk crossing</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-colonnade.mp4" poster="assets/media/lens-colonnade.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-colonnade.webp" width="720" height="1280" alt="A white colonnaded courtyard with palms and lawn (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">white arches</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-mountain-river.mp4" poster="assets/media/lens-mountain-river.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-mountain-river.webp" width="720" height="1280" alt="A rocky mountain river below pine-covered slopes (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">mountain river</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-night-highway.mp4" poster="assets/media/lens-night-highway.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-night-highway.webp" width="720" height="1280" alt="Car lights streaking along a highway at night (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">night highway</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-lakeside.webp" width="787" height="1400" alt="A green lakeside under a towering cloudy sky" loading="lazy" decoding="async" /><span class="lens-cap">lakeside</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video lens-crop"><video src="assets/media/lens-open-road.mp4" poster="assets/media/lens-open-road.webp" width="720" height="1152" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-open-road.webp" width="720" height="1152" alt="An open road under big white clouds (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">the open road</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-white-dome.mp4" poster="assets/media/lens-white-dome.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-white-dome.webp" width="720" height="1280" alt="A white marble dome rising behind tropical plants (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">marble &amp; palms</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-out-on-the-water.webp" width="787" height="1400" alt="The bow of a boat heading out under a bright sun and clouds" loading="lazy" decoding="async" /><span class="lens-cap">out on the water</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn lens-btn--video"><video src="assets/media/lens-chai-with-a-view.mp4" poster="assets/media/lens-chai-with-a-view.webp" width="720" height="1280" muted loop playsinline preload="none" aria-hidden="true"></video><img class="lens-poster" src="assets/media/lens-chai-with-a-view.webp" width="720" height="1280" alt="A cup of coffee and glasses on a ledge facing misty mountains (video)" loading="lazy" decoding="async" /><span class="lens-badge" aria-hidden="true">▶</span><span class="lens-cap">coffee with a view</span></div></li>
+          <li class="lens-item reveal"><div class="lens-btn"><img src="assets/media/lens-husky.webp" width="720" height="1280" alt="A husky among rocks and twisted trees, in black and white" loading="lazy" decoding="async" /><span class="lens-cap">snow dog</span></div></li>
+        </ul>
       </section>
 
       <!-- INSTAGRAM / NIGHT -->
@@ -303,9 +426,5 @@
       <button type="button" class="np-btn" data-toggle-music aria-label="Play the sunset mix"><span class="play-icon" aria-hidden="true"></span></button>
     </div>
 
-    <div class="lightbox" hidden>
-      <button type="button" class="lightbox-close" aria-label="Close photo">×</button>
-      <figure><img alt="" /><figcaption></figcaption></figure>
-    </div>
   </body>
 </html>

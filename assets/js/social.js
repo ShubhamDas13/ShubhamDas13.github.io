@@ -471,36 +471,34 @@ onScroll();
 if (reduceMotion) drawSnow();
 requestAnimationFrame(loop);
 
-/* ---------- Postcard lightbox ---------- */
-const lightbox = document.querySelector(".lightbox");
-const lbImg = lightbox?.querySelector("img");
-const lbCap = lightbox?.querySelector("figcaption");
-let lastFocus = null;
-const closeLightbox = () => {
-  if (!lightbox) return;
-  lightbox.hidden = true;
-  document.body.style.overflow = "";
-  lastFocus?.focus();
-};
-document.querySelectorAll("button.photo").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const img = btn.querySelector("img");
-    if (!img || !lightbox || !lbImg || !lbCap) return;
-    lastFocus = btn;
-    lbImg.src = img.currentSrc || img.src;
-    lbImg.alt = img.alt;
-    lbCap.textContent = btn.closest(".postcard")?.querySelector(".postcard-caption")?.textContent || "";
-    lightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-    lightbox.querySelector(".lightbox-close")?.focus();
+/* ---------- Reels: muted clips that play only while on screen ---------- */
+document.querySelectorAll(".reel video, .lens-btn--video video").forEach((video) => {
+  const box = video.closest(".reel, .lens-btn--video");
+  if (reduceMotion || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { video.preload = "auto"; video.play().then(() => box.classList.add("is-playing")).catch(() => {}); }
+    else video.pause();
+  }, { threshold: 0.5 }).observe(box);
+});
+
+/* ---------- Lens gallery: masonry rows from each frame's aspect ratio ---------- */
+const lensGrid = document.querySelector(".lens");
+const layoutLens = () => {
+  if (!lensGrid) return;
+  const items = [...lensGrid.children];
+  if (!items.length) return;
+  const colW = items[0].getBoundingClientRect().width;
+  const gap = parseFloat(getComputedStyle(items[0]).marginBottom) || 0;
+  const rowH = parseFloat(getComputedStyle(lensGrid).gridAutoRows) || 4;
+  items.forEach((li) => {
+    const btn = li.querySelector(".lens-btn");
+    const img = li.querySelector("img");
+    const ratio = btn?.classList.contains("lens-crop") ? 1.6 : (+img.getAttribute("height") / +img.getAttribute("width")) || 1;
+    li.style.gridRowEnd = "span " + Math.ceil((colW * ratio + gap) / rowH);
   });
-});
-lightbox?.addEventListener("click", (e) => {
-  if (e.target === lightbox || (e.target instanceof Element && e.target.closest(".lightbox-close"))) closeLightbox();
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && lightbox && !lightbox.hidden) closeLightbox();
-});
+};
+layoutLens();
+addEventListener("resize", layoutLens);
 
 /* ---------- Beach football ---------- */
 const field = document.querySelector(".pitch-field");

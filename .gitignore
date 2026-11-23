@@ -3,3 +3,10 @@
 *.log
 __pycache__/
 *.pyc
+
+# raw Instagram export (originals, incl. photos of other people) - not for publishing
+posts/
+
+# raw Instagram exports - not for publishing
+stories/
+assets/media-originals-*/

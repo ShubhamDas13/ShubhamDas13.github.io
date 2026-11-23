@@ -17,7 +17,9 @@ Project-1/
 │   ├── images/
 │   │   ├── og/             1200×630 link-preview images, one per page
 │   │   ├── projects/       Screenshots on the project cards
-│   │   └── travel/         Travel photos for the social page postcards (add yours here)
+│   │   └── travel/         Spare folder for travel photos (tools/clean-photos.py writes here)
+│   ├── media/              Social page photos, reels (MP4 + poster) and lens-*.webp gallery shots
+│   ├── fonts/              Self-hosted web fonts (+ licence)
 │   └── docs/               Shubham_Das_Resume.pdf
 ├── games/
 │   ├── README.md           How to add browser builds
