@@ -140,7 +140,7 @@ h1 { font-size: clamp(2.5rem, 5.6vw, 4.4rem); font-weight: 800; line-height: 1.0
   border: 1px solid var(--navy-line); border-radius: 14px;
   background: rgba(21, 38, 61, 0.88);
   box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
 }
 
 .board-head, .board-foot {
@@ -574,4 +574,56 @@ strong { font-weight: 600; color: var(--ink); }
 .site-nav .nav-social:hover { border-color: var(--orange); background: rgba(242,107,29,0.1); }
 @media (max-width: 720px) {
   .site-nav .nav-social { padding: 12px 0; border: 0; border-radius: 0; }
+}
+
+
+/* ---------- Phone & touch fixes ---------- */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html, body { overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+* { -webkit-tap-highlight-color: transparent; }
+.gantt-dates, .hint-touch { display: none; }
+
+@media (hover: none) {
+  [data-tip]::after { display: none; }
+  .hint-hover { display: none; }
+  .hint-touch { display: inline; }
+  .gantt-dates { display: block; margin-top: 2px; color: var(--muted); font-family: var(--mono); font-size: 0.68rem; font-weight: 500; }
+  .package:hover { transform: none; box-shadow: none; border-color: var(--line); }
+  .package:hover .package-visual img { transform: none; }
+  .btn:hover { transform: none; }
+  .phase:hover .phase-num { border-color: var(--navy); }
+  .phase.is-active:hover .phase-num { border-color: var(--orange); }
+}
+
+@media (max-width: 720px) {
+  [data-tip]::after { display: none; }
+  .gantt-dates { display: block; margin-top: 2px; color: var(--muted); font-family: var(--mono); font-size: 0.68rem; font-weight: 500; }
+  .hero h1 { font-size: clamp(2.2rem, 10.5vw, 2.9rem); }
+  .lede { font-size: 1rem; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .actions .btn { justify-content: center; text-align: center; }
+  .tag-line { font-size: 0.74rem; padding: 5px 12px; }
+  .board-head, .board-foot { padding: 12px 16px; }
+  .board-item { padding: 16px; }
+  .board-metric strong { font-size: 2.2rem; }
+  .kpis { margin-top: 48px; }
+  .kpi strong { font-size: 2rem; }
+  .kpi span { font-size: 0.82rem; }
+  .section-head h2 { font-size: clamp(1.8rem, 8vw, 2.3rem); }
+  .section-intro { font-size: 0.98rem; }
+  .gantt-track { height: 18px; }
+  .bar { top: 2px; height: 14px; }
+  .role h3 { font-size: 1.3rem; }
+  .role-meta .mono { font-size: 0.68rem; }
+  .package-head { flex-wrap: wrap; gap: 4px 12px; }
+  .package h3 { font-size: 1.2rem; }
+  .about-lead { font-size: 1.2rem; }
+  .contact h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .copy-email { flex-wrap: wrap; justify-content: center; max-width: 100%; }
+  .copy-email .mono { font-size: 0.78rem; word-break: break-all; }
+}
+@media (max-width: 720px) {
+  .hint-hover { display: none; }
+  .hint-touch { display: inline; }
 }

@@ -457,7 +457,16 @@ const loop = () => {
 };
 
 sizeCanvases();
-window.addEventListener("resize", sizeCanvases);
+let lastW = window.innerWidth;
+let lastH = window.innerHeight;
+window.addEventListener("resize", () => {
+  // phones fire resize when the address bar shows/hides; only rebuild on real size changes
+  if (window.innerWidth !== lastW || Math.abs(window.innerHeight - lastH) > 160) {
+    lastW = window.innerWidth;
+    lastH = window.innerHeight;
+    sizeCanvases();
+  }
+});
 onScroll();
 if (reduceMotion) drawSnow();
 requestAnimationFrame(loop);

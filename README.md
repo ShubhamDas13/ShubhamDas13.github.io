@@ -36,5 +36,5 @@ Postcard frames are square, so square or near-square photos fit best.
 
 ## Changing CSS or JS
 
-`social.html` loads its files with a version tag (`?v=4`) so browsers fetch the latest copy.
+`social.html` loads its files with a version tag (`?v=5`) so browsers fetch the latest copy.
 Bump the number after editing `social.css` or `social.js` if a browser shows the old version.
