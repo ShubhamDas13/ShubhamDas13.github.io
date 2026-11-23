@@ -154,7 +154,7 @@ h1 { font-size: clamp(2.5rem, 5.6vw, 4.4rem); font-weight: 800; line-height: 1.0
 .board-item + .board-item { border-top: 1px dashed var(--navy-line); }
 
 .board-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.board-row h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.board-row h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
 .board-role { margin: 4px 0 14px; color: #8fa3bd; font-size: 0.85rem; }
 
 .scope { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
@@ -193,7 +193,7 @@ h1 { font-size: clamp(2.5rem, 5.6vw, 4.4rem); font-weight: 800; line-height: 1.0
 @keyframes link-up { 0%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
 
 .board-item--split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.board-item--split h2 { margin-bottom: 8px; font-size: 0.98rem; }
+.board-item--split h3 { margin-bottom: 8px; font-size: 0.98rem; }
 .board-item--split .chip { white-space: normal; }
 
 /* KPIs */
@@ -637,4 +637,38 @@ html, body { overflow-x: hidden; }
 @media (max-width: 1000px) and (min-width: 721px) {
   .site-nav { gap: 18px; }
   .site-nav a { font-size: 0.85rem; }
+}
+
+/* ---------- Skip link & keyboard focus ---------- */
+.skip-link {
+  position: fixed; top: 10px; left: 10px; z-index: 1000; padding: 10px 16px; border-radius: 8px;
+  background: #f26b1d; color: #fff; font-weight: 600; transform: translateY(-160%); transition: transform 0.2s;
+}
+.skip-link:focus { transform: none; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #f26b1d; outline-offset: 3px; border-radius: 6px; }
+
+/* ---------- Footer links ---------- */
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.footer-links a { color: #8fa3bd; }
+.footer-links a:hover { color: var(--orange); }
+
+/* ---------- Print (one clean page of the essentials) ---------- */
+@media print {
+  @page { margin: 14mm; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .site-header, .menu-toggle, .scroll-progress, .hero-spot, .actions, .kpis, #approach, .gantt, .gantt-hint,
+  .package-visual, .repo-link, .contact .actions, .copy-email, .copy-feedback, .site-footer, .skip-link, .phases-hint { display: none !important; }
+  .hero, .contact { background: none !important; color: #000; padding: 0 0 12pt; }
+  .hero-inner { grid-template-columns: 1fr; gap: 12pt; }
+  .hero h1 { font-size: 22pt; color: #000; }
+  .hero .hl, .hl { color: #c2510f; }
+  .lede, .tag-line { color: #333; }
+  .board { box-shadow: none; background: none; border: 1px solid #999; color: #000; }
+  .board *, .board-role, .board-metric span { color: #000 !important; }
+  .scope li, .chip { background: none !important; border: 1px solid #999; color: #000 !important; }
+  .section, .section-tint { padding: 12pt 0; background: none; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .role, .package, .card { break-inside: avoid; box-shadow: none; border-color: #999; }
+  .packages { grid-template-columns: 1fr 1fr; }
+  a { color: #000; text-decoration: none; }
 }

@@ -1,5 +1,7 @@
 # Browser builds of the games
 
+**Nimbus** is already playable: `games/nimbus/` is a JavaScript port of the Unity game (see its README).
+
 Put each game's Unity **WebGL** build here:
 
 ```

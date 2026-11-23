@@ -6,14 +6,28 @@
     <meta name="theme-color" content="#0a0614" />
     <meta name="description" content="Play Warxel and Nimbus, games made by Shubham Das in Unity, right in your browser." />
     <title>Shubham Das — Arcade</title>
+    <link rel="canonical" href="https://shubhamdas13.github.io/games.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shubham Das" />
+    <meta property="og:title" content="Shubham Das — Arcade" />
+    <meta property="og:description" content="Play Nimbus, a 2D platformer Shubham Das built in Unity, right in your browser, and see Warxel, a 1v1 online fighting game." />
+    <meta property="og:url" content="https://shubhamdas13.github.io/games.html" />
+    <meta property="og:image" content="https://shubhamdas13.github.io/assets/images/og/games.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shubham Das — Arcade" />
+    <meta name="twitter:description" content="Play Nimbus, a 2D platformer Shubham Das built in Unity, right in your browser, and see Warxel, a 1v1 online fighting game." />
+    <meta name="twitter:image" content="https://shubhamdas13.github.io/assets/images/og/games.jpg" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0614'/%3E%3Crect x='14' y='22' width='36' height='22' rx='6' fill='none' stroke='%23ff3ea5' stroke-width='4'/%3E%3Crect x='20' y='31' width='8' height='4' fill='%2300f0ff'/%3E%3Crect x='22' y='29' width='4' height='8' fill='%2300f0ff'/%3E%3Ccircle cx='40' cy='31' r='2.5' fill='%23ffe94d'/%3E%3Ccircle cx='44' cy='35' r='2.5' fill='%23ffe94d'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/games.css?v=3" />
+    <link rel="stylesheet" href="assets/css/games.css?v=5" />
     <script src="assets/js/games.js?v=1" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="crt" aria-hidden="true"></div>
 
     <header class="nav">
@@ -23,15 +37,15 @@
           <span></span><span></span><span class="sr-only">Toggle navigation</span>
         </button>
         <nav class="nav-links" id="nav-links" aria-label="Arcade navigation">
-          <a href="#warxel">Warxel</a>
           <a href="#nimbus">Nimbus</a>
+          <a href="#warxel">Warxel</a>
           <a href="social.html">Social</a>
           <a class="nav-work" href="index.html">← Work portfolio</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <!-- HERO -->
       <section class="hero" id="top">
         <div class="sky" aria-hidden="true">
@@ -43,8 +57,8 @@
           <h1><span class="glitch" data-text="ARCADE">ARCADE</span></h1>
           <p class="lede">Games I built in Unity during college. Pick a cabinet, press start and play right here in your browser.</p>
           <div class="hero-actions">
-            <a class="btn btn-pink" href="#warxel">Play Warxel</a>
             <a class="btn btn-cyan" href="#nimbus">Play Nimbus</a>
+            <a class="btn btn-pink" href="#warxel">Play Warxel</a>
           </div>
           <p class="insert-coin" aria-hidden="true">INSERT COIN</p>
         </div>
@@ -52,6 +66,42 @@
 
       <!-- CABINETS -->
       <section class="cabinets wrap">
+        <!-- NIMBUS -->
+        <article class="cabinet" id="nimbus" data-game="nimbus" data-src="games/nimbus/index.html" style="--neon: #00f0ff; --neon-2: #ffe94d">
+          <div class="marquee">
+            <span class="marquee-kicker">SINGLE PLAYER · 2D</span>
+            <h2>NIMBUS</h2>
+          </div>
+
+          <div class="screen-bezel">
+            <div class="screen">
+              <div class="screen-idle">
+                <div class="idle-art idle-art--nimbus" aria-hidden="true"><span></span><span></span><span></span></div>
+                <button type="button" class="press-start" data-start>PRESS START</button>
+                <p class="screen-note" data-note>Loads the game in your browser</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="console">
+            <div class="console-info">
+              <p class="tagline">A 2D action platformer through the clouds. Get past the Umibozu and the ravens, reach the Oracle, then beat Apollo to make it rain.</p>
+              <dl class="stats">
+                <div><dt>GENRE</dt><dd>Platformer</dd></div>
+                <div><dt>PLAYERS</dt><dd>1</dd></div>
+                <div><dt>ENGINE</dt><dd>Unity → Web</dd></div>
+                <div><dt>LEVELS</dt><dd>3 + boss</dd></div>
+              </dl>
+              <p class="controls"><b>Controls</b> A/D or ←/→ move · Space jump (double, wall-jump) · Shift dash · Click or J attack · M mute. Touch buttons on phones. <span>Tip: Apollo only takes damage when you dash into him.</span></p>
+            </div>
+            <div class="console-buttons">
+              <button type="button" class="pad-btn" data-fullscreen disabled>⛶ Fullscreen</button>
+              <a class="pad-btn" href="https://github.com/ShubhamDas13/Nimbus_GDD/archive/refs/heads/main.zip">⬇ Windows build</a>
+              <a class="pad-btn" href="https://github.com/ShubhamDas13/Nimbus_GDD" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
         <!-- WARXEL -->
         <article class="cabinet" id="warxel" data-game="warxel" data-src="games/warxel/index.html" style="--neon: #ff3ea5; --neon-2: #00f0ff">
           <div class="marquee">
@@ -87,42 +137,7 @@
           </div>
         </article>
 
-        <!-- NIMBUS -->
-        <article class="cabinet" id="nimbus" data-game="nimbus" data-src="games/nimbus/index.html" style="--neon: #00f0ff; --neon-2: #ffe94d">
-          <div class="marquee">
-            <span class="marquee-kicker">SINGLE PLAYER · 2D</span>
-            <h2>NIMBUS</h2>
-          </div>
-
-          <div class="screen-bezel">
-            <div class="screen">
-              <div class="screen-idle">
-                <div class="idle-art idle-art--nimbus" aria-hidden="true"><span></span><span></span><span></span></div>
-                <button type="button" class="press-start" data-start>PRESS START</button>
-                <p class="screen-note" data-note>Loads the game in your browser</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="console">
-            <div class="console-info">
-              <p class="tagline">A 2D single-player game made in Unity.</p>
-              <dl class="stats">
-                <div><dt>GENRE</dt><dd>2D</dd></div>
-                <div><dt>PLAYERS</dt><dd>1</dd></div>
-                <div><dt>ENGINE</dt><dd>Unity · C#</dd></div>
-                <div><dt>BUILD</dt><dd>Windows · Web</dd></div>
-              </dl>
-            </div>
-            <div class="console-buttons">
-              <button type="button" class="pad-btn" data-fullscreen disabled>⛶ Fullscreen</button>
-              <a class="pad-btn" href="https://github.com/ShubhamDas13/Nimbus_GDD/archive/refs/heads/main.zip">⬇ Windows build</a>
-              <a class="pad-btn" href="https://github.com/ShubhamDas13/Nimbus_GDD" target="_blank" rel="noreferrer">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <p class="mobile-note">Unity games play best on a computer with a keyboard. On a phone, open this page on a laptop to play.</p>
+        <p class="mobile-note">Nimbus has on-screen touch controls. Warxel needs a computer.</p>
       </section>
     </main>
 

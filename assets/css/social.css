@@ -442,3 +442,11 @@ html, body { overflow-x: hidden; }
   .deck { padding: 14px; }
   .record { width: 60px; height: 60px; }
 }
+
+/* ---------- Skip link & keyboard focus ---------- */
+.skip-link {
+  position: fixed; top: 10px; left: 10px; z-index: 1000; padding: 10px 16px; border-radius: 8px;
+  background: #ffd27a; color: #241f4f; font-weight: 600; transform: translateY(-160%); transition: transform 0.2s;
+}
+.skip-link:focus { transform: none; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #ffd27a; outline-offset: 3px; border-radius: 6px; }

@@ -198,3 +198,14 @@ h1, h2 { margin: 0; font-family: var(--pixel); font-weight: 400; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.controls { margin: 14px 0 0; color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+.controls b { margin-right: 6px; font-family: var(--pixel); font-size: 0.5rem; color: var(--neon); letter-spacing: 0.1em; }
+.controls span { display: block; color: var(--yellow); }
+
+/* ---------- Skip link & keyboard focus ---------- */
+.skip-link {
+  position: fixed; top: 10px; left: 10px; z-index: 1000; padding: 10px 16px; border-radius: 8px;
+  background: #00f0ff; color: #0a0614; font-weight: 600; transform: translateY(-160%); transition: transform 0.2s;
+}
+.skip-link:focus { transform: none; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #00f0ff; outline-offset: 3px; border-radius: 6px; }
