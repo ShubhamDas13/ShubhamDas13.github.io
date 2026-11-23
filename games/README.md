@@ -5,7 +5,7 @@
 Put each game's Unity **WebGL** build here:
 
 ```
-games/warxel/index.html   (+ Build/, TemplateData/)
+games/warxel/index.html   (+ Build/, TemplateData/)   <- create this folder when you have the build
 games/nimbus/index.html   (+ Build/, TemplateData/)
 ```
 

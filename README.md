@@ -16,35 +16,26 @@ Project-1/
 │   ├── js/                 main.js (index) · social.js · games.js
 │   ├── images/
 │   │   ├── og/             1200×630 link-preview images, one per page
-│   │   ├── projects/       Screenshots on the project cards
-│   │   └── travel/         Spare folder for travel photos (tools/clean-photos.py writes here)
+│   │   └── projects/       Screenshots on the project cards
 │   ├── media/              Social page photos, reels (MP4 + poster) and lens-*.webp gallery shots
 │   ├── fonts/              Self-hosted web fonts (+ licence)
 │   └── docs/               Shubham_Das_Resume.pdf
 ├── games/
 │   ├── README.md           How to add browser builds
-│   ├── nimbus/             Nimbus, ported to the web (self-contained, see its README)
+│   └── nimbus/             Nimbus, ported to the web (self-contained, see its README)
 │   │   ├── index.html
 │   │   ├── js/             nimbus.js (engine + gameplay) · data.js (levels, generated)
 │   │   └── assets/         img/ (original art) · audio/ (original sound)
-│   └── warxel/             Put Warxel's Unity WebGL build here when you have one
 └── tools/
     └── nimbus-port/        Python scripts that converted the Unity build (not used by the site)
 ```
 
-## Adding a travel photo
+## Adding a photo to the social page
 
-1. Put the image in `assets/images/travel/`.
-2. In `social.html`, find a postcard and replace its placeholder
-   `<div class="photo photo--empty …">…</div>` with:
-
-   ```html
-   <button type="button" class="photo"><img src="assets/images/travel/FILE.jpg" alt="What the photo shows" loading="lazy" /></button>
-   ```
-
-3. Change the text in that postcard's `<p class="postcard-caption">`.
-
-Postcard frames are square, so square or near-square photos fit best.
+1. Clean it first (removes GPS location and other hidden data, resizes for the web):
+   `python3 tools/clean-photos.py ~/Desktop/photo.jpg` (writes to `assets/media/`).
+2. In `social.html`, copy one `<figure class="postcard">` (or a moments / lens tile) and change the
+   image path, `alt` text and caption.
 
 ## Changing CSS or JS
 

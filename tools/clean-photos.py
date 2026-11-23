@@ -5,13 +5,13 @@ photo before adding it to the site:
 
     python3 tools/clean-photos.py ~/Desktop/trip/*.jpg
 
-Cleaned copies are written to assets/images/travel/ (max 1600 px, JPEG quality 82). Needs Pillow:
+Cleaned copies are written to assets/media/ (max 1600 px, JPEG quality 82). Needs Pillow:
     python3 -m pip install pillow
 """
 import sys, os
 from PIL import Image, ImageOps
 
-OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "images", "travel")
+OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "media")
 os.makedirs(OUT, exist_ok=True)
 for src in sys.argv[1:]:
     im = Image.open(src)
@@ -21,4 +21,4 @@ for src in sys.argv[1:]:
     name = os.path.splitext(os.path.basename(src))[0].lower().replace(" ", "-") + ".jpg"
     clean = Image.new("RGB", im.size); clean.paste(im)   # fresh image: no EXIF, XMP or ICC carried over
     clean.save(os.path.join(OUT, name), "JPEG", quality=82, optimize=True, progressive=True)
-    print("cleaned ->", os.path.join("assets/images/travel", name), clean.size)
+    print("cleaned ->", os.path.join("assets/media", name), clean.size)
